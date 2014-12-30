@@ -16,130 +16,131 @@
          <span class="required_notification">* Denotes Required Field</span>
     </li>
   <li>
-<%# Insert drop down option_for_select box here for manufacturer %>
-
+    <%= f.label :module_m_id, "Manufacturer" %>
+    <%= f.text_field :module_m_id, :type => "number" %>
     <span class="form_hint">Proper format test</span>
+  
   </li>
   <li>
-    <%= f.label :part_number %>
+    <%= f.label :part_number, "Model" %>
     <%= f.text_field :part_number, :type => "text" %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">First select the manufacturer, then the model</span>
   
   </li>
   <li>
-    <%= f.label :stc %>
+    <%= f.label :stc, "STC" %>
     <%= f.text_field :stc %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Standard Test Conditions</span>
   
   </li>
   <li>
-    <%= f.label :ptc %>
+    <%= f.label :ptc, "PTC" %>
     <%= f.text_field :ptc %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">PV Test USA Conditions</span>
   
   </li>
   <li>
     <%= f.label :pmax %>
     <%= f.text_field :pmax %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Max Power (W)</span>
   
   </li>
   <li>
     <%= f.label :isc %>
     <%= f.text_field :isc %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Short Circut Current (A)</span>
   
   </li>
   <li>
     <%= f.label :imp %>
     <%= f.text_field :imp %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Max Power Current (A)</span>
   
   </li>
   <li>
     <%= f.label :voc %>
     <%= f.text_field :voc %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Open Circuit Voltage (V)</span>
   
   </li>
   <li>
     <%= f.label :vmp %>
     <%= f.text_field :vmp %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Max Power Voltage (V)</span>
   
   </li>
   <li>
     <%= f.label :height_mm %>
     <%= f.text_field :height_mm %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Height in Millimeters</span>
   
   </li>
   <li>
     <%= f.label :width_mm %>
     <%= f.text_field :width_mm %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Width in Millimeters</span>
   
   </li>
   <li>
     <%= f.label :height_in %>
     <%= f.text_field :height_in %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Height in Inches</span>
   
   </li>
   <li>
     <%= f.label :width_in %>
     <%= f.text_field :width_in %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Width in Inches</span>
   </li>
   <li>
     <%= f.label :thickness_mm %>
     <%= f.text_field :thickness_mm %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Thickness in Millimeters</span>
   </li>
   <li>
     <%= f.label :thickness_in %>
     <%= f.text_field :thickness_in %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Thickness in Inches</span>
   </li>
   <li>
     <%= f.label :weight_kg %>
     <%= f.text_field :weight_kg %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Weight in Kilograms</span>
   </li>
   <li>
     <%= f.label :weight_lbs %>
     <%= f.text_field :weight_lbs %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Weight in Pounds</span>
   </li>
   <li>
     <%= f.label :tolerance_hi %>
     <%= f.text_field :tolerance_hi %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Power Tolerance (+%)</span>
   </li>
   <li>
     <%= f.label :tolerance_low %>
     <%= f.text_field :tolerance_low %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Power Tolerance (-%)</span>
   </li>
   <li>
-    <%= f.label :noct %>
+    <%= f.label :noct, "NOCT" %>
     <%= f.text_field :noct %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Nominal Operating Cell Temperature in &deg;C</span>
   </li>
   <li>
     <%= f.label :cell_type%>
     <%= f.select :cell_type, options_for_select(["choose one", "monocrystalline", "polycrystalline"]) %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Cell Type</span>
   </li>
   <li>
     <%= f.label :frame_color %>
     <%= f.select :frame_color, options_for_select(["choose one", "silver/clear", "black"])  %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Module Frame Color</span>
   </li>
   <li>
-    <%= f.label :max_sys_v %>
+    <%= f.label :max_sys_v, "Max System Voltage" %>
     <%= f.text_field :max_sys_v %>
-    <span class="form_hint">Proper format test</span>
+    <span class="form_hint">Maximum System Voltage (usually module Max V)</span>
   </li>
   <li>
     <%= f.label :connector_type %>

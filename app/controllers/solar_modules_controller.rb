@@ -40,8 +40,6 @@ class SolarModulesController < ApplicationController
   # PATCH/PUT /solar_modules/1
   # PATCH/PUT /solar_modules/1.json
   def update
-     @manufacturers = Manufacturer.all
-     @solar_modules = SolarModule.where("manufacturer_id = ?", Manufacturer.first.id)
      respond_to do |format|
       if @solar_module.update(solar_module_params)
         format.html { redirect_to @solar_module, notice: 'Solar module was successfully updated.' }
@@ -76,6 +74,6 @@ class SolarModulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def solar_module_params
-      params.require(:solar_module).permit(:manufacturer_id, :part_number, :stc, :ptc, :pmax, :isc, :imp, :voc, :vmp, :height_mm, :width_mm, :height_in, :width_in, :thickness_mm, :thickness_in, :weight_kg, :weight_lbs, :tolerance_hi, :tolerance_low, :noct, :cell_type, :frame_color, :max_sys_v, :connector_type, :fire_rating, :image, :image)
+      params.require(:solar_module).permit(:module_m_id, :part_number, :stc, :ptc, :pmax, :isc, :imp, :voc, :vmp, :height_mm, :width_mm, :height_in, :width_in, :thickness_mm, :thickness_in, :weight_kg, :weight_lbs, :tolerance_hi, :tolerance_low, :noct, :cell_type, :frame_color, :max_sys_v, :connector_type, :fire_rating, :image)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230035731) do
+ActiveRecord::Schema.define(version: 20141230061541) do
 
   create_table "images", force: true do |t|
     t.string   "image"
@@ -21,7 +21,13 @@ ActiveRecord::Schema.define(version: 20141230035731) do
     t.datetime "updated_at"
   end
 
-  create_table "module_manufacturers", force: true do |t|
+  create_table "module_m", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "module_ms", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -29,33 +35,33 @@ ActiveRecord::Schema.define(version: 20141230035731) do
 
   create_table "solar_modules", force: true do |t|
     t.string   "part_number"
-    t.decimal  "stc",             precision: 5, scale: 2
-    t.decimal  "ptc",             precision: 5, scale: 2
-    t.decimal  "pmax",            precision: 5, scale: 2
-    t.decimal  "isc",             precision: 5, scale: 2
-    t.decimal  "imp",             precision: 5, scale: 2
-    t.decimal  "voc",             precision: 5, scale: 2
-    t.decimal  "vmp",             precision: 5, scale: 2
-    t.decimal  "height_mm",       precision: 7, scale: 2
-    t.decimal  "width_mm",        precision: 7, scale: 2
-    t.decimal  "height_in",       precision: 5, scale: 2
-    t.decimal  "width_in",        precision: 5, scale: 2
-    t.decimal  "thickness_mm",    precision: 7, scale: 2
-    t.decimal  "thickness_in",    precision: 7, scale: 2
-    t.decimal  "weight_kg",       precision: 5, scale: 2
-    t.decimal  "weight_lbs",      precision: 5, scale: 2
-    t.decimal  "tolerance_hi",    precision: 5, scale: 2
-    t.decimal  "tolerance_low",   precision: 5, scale: 2
-    t.decimal  "noct",            precision: 5, scale: 2
+    t.decimal  "stc",            precision: 5, scale: 2
+    t.decimal  "ptc",            precision: 5, scale: 2
+    t.decimal  "pmax",           precision: 5, scale: 2
+    t.decimal  "isc",            precision: 5, scale: 2
+    t.decimal  "imp",            precision: 5, scale: 2
+    t.decimal  "voc",            precision: 5, scale: 2
+    t.decimal  "vmp",            precision: 5, scale: 2
+    t.decimal  "height_mm",      precision: 7, scale: 2
+    t.decimal  "width_mm",       precision: 7, scale: 2
+    t.decimal  "height_in",      precision: 5, scale: 2
+    t.decimal  "width_in",       precision: 5, scale: 2
+    t.decimal  "thickness_mm",   precision: 7, scale: 2
+    t.decimal  "thickness_in",   precision: 7, scale: 2
+    t.decimal  "weight_kg",      precision: 5, scale: 2
+    t.decimal  "weight_lbs",     precision: 5, scale: 2
+    t.decimal  "tolerance_hi",   precision: 5, scale: 2
+    t.decimal  "tolerance_low",  precision: 5, scale: 2
+    t.decimal  "noct",           precision: 5, scale: 2
     t.string   "cell_type"
     t.string   "frame_color"
-    t.decimal  "max_sys_v",       precision: 5, scale: 2
+    t.decimal  "max_sys_v",      precision: 5, scale: 2
     t.string   "connector_type"
     t.string   "fire_rating"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
-    t.string   "manufacturer_id"
+    t.string   "module_m_id"
   end
 
 end

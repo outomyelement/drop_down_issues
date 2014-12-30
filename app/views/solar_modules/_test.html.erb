@@ -1,0 +1,25 @@
+<%= form_for @solar_module, :html => {:multipart => true, :class => "product_form"} do |f| %>
+  <% if @solar_module.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <li>
+          <h2><%= pluralize(@solar_module.errors.count, "error") %> prohibited this solar_module from being saved:</h2>
+        </li>
+      <% @solar_module.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <li>
+         <h2>Testing Drop Down Boxes</h2>
+         <span class="required_notification">* Denotes Required Field</span>
+    </li>
+  <li>
+<%= f.collection_select :solar_module, :part_number, SolarModule.all, :id, :part_number %>
+
+    <span class="form_hint">Proper format test</span>
+  </li>
+
+    <%= f.submit %>
+<% end %>

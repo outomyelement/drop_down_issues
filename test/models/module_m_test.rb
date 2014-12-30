@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ModuleManufacturerTest < ActiveSupport::TestCase
+class ModuleMTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

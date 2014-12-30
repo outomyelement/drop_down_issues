@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :solar_modules
+  resources :module_manufacturers
 
 
   # The priority is based upon order of creation: first created -> highest priority.

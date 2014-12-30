@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-SolarModule.create(part_number: "ND245", manufacturer_id: Manufacturer.find_by(name: "Kyocera").id)
-SolarModule.create(part_number: "ND250", manufacturer_id: Manufacturer.find_by(name: "Kyocera").id)
-SolarModule.create(part_number: "SW275", manufacturer_id: Manufacturer.find_by(name: "Solar World").id)
-SolarModule.create(part_number: "SW280", manufacturer_id: Manufacturer.find_by(name: "Solar World").id)
+ModuleManufacturer.create(name: "Kyocera")
+ModuleManufacturer.create(name: "LG Electronics")
+ModuleManufacturer.create(name: "Sharp")
+ModuleManufacturer.create(name: "Solar World")
+ModuleManufacturer.create(name: "Suniva")

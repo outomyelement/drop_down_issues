@@ -80,7 +80,7 @@
       <td class="subheader_cell">Height (in)</td>
       <td class="subheader_cell">Width (in)</td>
       <td class="subheader_cell">Weight (lbs)</td>
-      <td class="subheader_cell" >Cell tye<div class="qlabs_tooltip">i<span><strong>Length</strong>This tooltip is positioned above a hovered item.</span></div></td>
+      <td class="subheader_cell" >Cell Type<div class="qlabs_tooltip">i<span><strong>Length</strong>This tooltip is positioned above a hovered item.</span></div></td>
       <td class="subheader_cell">Frame Color</td>
       <td class="subheader_cell">Spec Sheets</td>
       <td class="subheader_cell">Manuals</td>
@@ -91,7 +91,7 @@
     <% @solar_modules.each do |solar_module| %>
       <tr class="<%= cycle("data_odd", "data_even") %>">
         <td class="data_cell" ><%= link_to image_tag(solar_module.image.url(:thumb)), solar_module.image.url, :target => "_blank" %></td>
-        <td class="data_cell" ><%= solar_module.manufacturer_id %></td>
+        <td class="data_cell" ><%= solar_module.module_m_id %></td>
         <td class="data_cell" ><%= solar_module.part_number %></td>
         <td class="data_cell" ><%= solar_module.stc %></td>
         <td class="data_cell" ><%= solar_module.ptc %></td>
