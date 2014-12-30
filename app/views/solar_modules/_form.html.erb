@@ -15,7 +15,25 @@
          <h2>Edit Product Detail</h2>
          <span class="required_notification">* Denotes Required Field</span>
     </li>
-  <li>
+
+
+
+    <li>
+  <%= f.select :module_m_id, options_for_select(@module_ms.collect { |module_m|
+    [module_m.name.titleize, module_m.id] }, 1), {}, { id: 'module_ms_select' } %>
+      
+     <span class="form_hint">Proper format test</span>
+    </li>
+
+    <li>
+  <%= f.select :solar_m, options_for_select(@solar_m.collect { |solar_m|
+    [solar_m.name.titleize, solar_m.id] }, 0), {}, { id: 'solar_modules_select' } %>
+    <span class="form_hint">Proper format test</span>
+    </li>
+
+
+
+<!--   <li>
     <%= f.label :module_m_id, "Manufacturer" %>
     <%= f.text_field :module_m_id, :type => "number" %>
     <span class="form_hint">Proper format test</span>
@@ -26,7 +44,7 @@
     <%= f.text_field :part_number, :type => "text" %>
     <span class="form_hint">First select the manufacturer, then the model</span>
   
-  </li>
+  </li> -->
   <li>
     <%= f.label :stc, "STC" %>
     <%= f.text_field :stc %>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :solar_modules
-  resources :module_manufacturers
+  resources :module_ms
+
+  get 'solar_modules/update_solar_modules', as: 'update_solar_modules'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

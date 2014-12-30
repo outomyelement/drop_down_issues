@@ -11,18 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230061541) do
+ActiveRecord::Schema.define(version: 20141230073547) do
 
   create_table "images", force: true do |t|
     t.string   "image"
-    t.integer  "solar_module_id"
-    t.integer  "inverter_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "module_m", force: true do |t|
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

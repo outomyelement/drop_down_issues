@@ -15,16 +15,23 @@ class SolarModulesController < ApplicationController
   # GET /solar_modules/new
   def new
     @solar_module = SolarModule.new
+    @solar_m = SolarModule.where("module_m_id = '?'") 
+    @module_ms = ModuleM.all
   end
 
   # GET /solar_modules/1/edit
   def edit
+    @solar_module = SolarModule.new(solar_module_params)
+    # @solar_m = SolarModule.where("module_m_id = '?'")
+    @module_ms = ModuleM.all
   end
 
   # POST /solar_modules
   # POST /solar_modules.json
   def create
       @solar_module = SolarModule.new(solar_module_params)
+      @module_ms = ModuleM.all
+      # @solar_m = SolarModule.where("module_m_id = '?'")
 
     respond_to do |format|
       if @solar_module.save
@@ -40,17 +47,24 @@ class SolarModulesController < ApplicationController
   # PATCH/PUT /solar_modules/1
   # PATCH/PUT /solar_modules/1.json
   def update
+    @module_ms = ModuleM.all
+    @solar_m = SolarModule.where("module_m_id = ?")
      respond_to do |format|
       if @solar_module.update(solar_module_params)
         format.html { redirect_to @solar_module, notice: 'Solar module was successfully updated.' }
         format.json { render :show, status: :ok, location: @solar_module }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @solar_module.errors, status: :unprocessable_entity }
+
       end
     end
   end
 
+  def update_solar_modules
+    @solar_modules = SolarModules.where("module_m_id = ?", params[:module_m_id])
+  end
   # DELETE /solar_modules/1
   # DELETE /solar_modules/1.json
   def destroy
