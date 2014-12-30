@@ -1,0 +1,131 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to image_tag(@solar_module.image.url(:thumb)), @solar_module.image.url, :target => "_blank" %>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @solar_module.manufacturer_id %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @solar_module.part_number %>
+</p>
+
+<p>
+  <strong>STC:</strong>
+  <%= @solar_module.stc %>
+</p>
+
+<p>
+  <strong>PTC:</strong>
+  <%= @solar_module.ptc %>
+</p>
+
+<p>
+  <strong>Pmax:</strong>
+  <%= @solar_module.pmax %>
+</p>
+
+<p>
+  <strong>Isc:</strong>
+  <%= @solar_module.isc %>
+</p>
+
+<p>
+  <strong>Imp:</strong>
+  <%= @solar_module.imp %>
+</p>
+
+<p>
+  <strong>Voc:</strong>
+  <%= @solar_module.voc %>
+</p>
+
+<p>
+  <strong>Vmp:</strong>
+  <%= @solar_module.vmp %>
+</p>
+
+<p>
+  <strong>Height mm:</strong>
+  <%= @solar_module.height_mm %>
+</p>
+
+<p>
+  <strong>Width mm:</strong>
+  <%= @solar_module.width_mm %>
+</p>
+
+<p>
+  <strong>Height in:</strong>
+  <%= @solar_module.height_in %>
+</p>
+
+<p>
+  <strong>Width in:</strong>
+  <%= @solar_module.width_in %>
+</p>
+
+<p>
+  <strong>Thickness mm:</strong>
+  <%= @solar_module.thickness_mm %>
+</p>
+
+<p>
+  <strong>Thickness in:</strong>
+  <%= @solar_module.thickness_in %>
+</p>
+
+<p>
+  <strong>Weight kg:</strong>
+  <%= @solar_module.weight_kg %>
+</p>
+
+<p>
+  <strong>Weight lbs:</strong>
+  <%= @solar_module.weight_lbs %>
+</p>
+
+<p>
+  <strong>Tolerance hi:</strong>
+  <%= @solar_module.tolerance_hi %>
+</p>
+
+<p>
+  <strong>Tolerance low:</strong>
+  <%= @solar_module.tolerance_low %>
+</p>
+
+<p>
+  <strong>Noct:</strong>
+  <%= @solar_module.noct %>
+</p>
+
+<p>
+  <strong>Cell type:</strong>
+  <%= @solar_module.cell_type %>
+</p>
+
+<p>
+  <strong>Frame color:</strong>
+  <%= @solar_module.frame_color %>
+</p>
+
+<p>
+  <strong>Max sys v:</strong>
+  <%= @solar_module.max_sys_v %>
+</p>
+
+<p>
+  <strong>Connector type:</strong>
+  <%= @solar_module.connector_type %>
+</p>
+
+<p>
+  <strong>Fire rating:</strong>
+  <%= @solar_module.fire_rating %>
+</p>
+
+<%= link_to 'Edit', edit_solar_module_path(@solar_module) %> |
+<%= link_to 'Back', solar_modules_path %>

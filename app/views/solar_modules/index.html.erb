@@ -1,0 +1,119 @@
+<div class="page_container">
+  <h1>Listing Solar Modules</h1>
+  <%= link_to 'New Solar module', new_solar_module_path %>        
+        <!-- CSS3 Data Grids -->
+        <!-- inputs for table column filtering -->
+        <!-- number of inputs == number of table columns -->
+  <input id="col1" name="#" type="checkbox" />
+  <input id="col2" name="#" type="checkbox" />
+  <input id="col3" name="#" type="checkbox" />
+  <input id="col4" name="#" type="checkbox" />
+  <input id="col5" name="#" type="checkbox" />
+  <input id="col6" name="#" type="checkbox" />
+  <input id="col7" name="#" type="checkbox" />
+  <input id="col8" name="#" type="checkbox" />
+  <input id="col9" name="#" type="checkbox" />
+  <input id="col10" name="#" type="checkbox" />
+  <input id="col11" name="#" type="checkbox" />
+  <input id="col12" name="#" type="checkbox" />
+  <input id="col13" name="#" type="checkbox" />
+  <input id="col14" name="#" type="checkbox" />
+  <input id="col15" name="#" type="checkbox" />
+  <input id="col16" name="#" type="checkbox" />
+  <input id="col17" name="#" type="checkbox" />
+  <input id="col18" name="#" type="checkbox" />
+
+  <table class="qlabs_grid_container">
+    <!-- TABLE HEADER -->
+    <thead>
+    <tr class="header_row">
+        <td colspan="19" class="header_cell">
+            <h2 class="table_header">Solar Modules</h2> <!-- header label -->
+
+            <!-- table column filtering panel (optional) -->
+              <label for="table_config" class="table_config">Table Filter</label> <!-- button label -->
+              <input id="table_config" name="#" type="checkbox" />
+              <div class="table_config">
+                <h3 class="table_config">Active columns</h3> <!-- panel header -->
+                <ul>
+                  <li><label for="col1">Image</label></li>
+                  <li><label for="col2">Manufacturer</label></li>
+                  <li><label for="col3">Model</label></li>
+                  <li><label for="col4">STC</label></li>
+                  <li><label for="col5">PTC</label></li>
+                  <li><label for="col6">Pmax</label></li>
+                  <li><label for="col7">Isc</label></li>
+                  <li><label for="col8">Imp</label></li>
+                  <li><label for="col9">Voc</label></li>
+                  <li><label for="col10">Vmp</label></li>
+                  <li><label for="col11">Height (in)</label></li>
+                  <li><label for="col12">Width (in)</label></li>
+                  <li><label for="col13">Weight (lbs)</label></li>
+                  <li><label for="col14">Cell Type</label></li>
+                  <li><label for="col15">Frame Color</label></li>
+                  <li><label for="col16">Spec Sheets</label></li>
+                  <li><label for="col17">Manuals</label></li>
+                  <li><label for="col18">Warranty</label></li>
+                </ul>     
+              </div>
+              <!-- / -->
+            </td>
+          </tr>
+        </thead>    
+
+        <!-- TABLE BODY -->
+   <tbody class="data_container">
+   
+    <!-- SUBHEADER -->
+    <!-- define optional columns width here -->        
+    <tr class="subheader_row">
+      <td class="subheader_cell">Image</td>
+      <td class="subheader_cell">Manufacturer</td>
+      <td class="subheader_cell">Model</td>
+      <td class="subheader_cell">STC</td>
+      <td class="subheader_cell">PTC</td>
+      <td class="subheader_cell">Pmax</td>
+      <td class="subheader_cell">Isc</td>
+      <td class="subheader_cell">Imp</td>
+      <td class="subheader_cell">Voc</td>
+      <td class="subheader_cell">Vmp</td>
+      <td class="subheader_cell">Height (in)</td>
+      <td class="subheader_cell">Width (in)</td>
+      <td class="subheader_cell">Weight (lbs)</td>
+      <td class="subheader_cell" >Cell tye<div class="qlabs_tooltip">i<span><strong>Length</strong>This tooltip is positioned above a hovered item.</span></div></td>
+      <td class="subheader_cell">Frame Color</td>
+      <td class="subheader_cell">Spec Sheets</td>
+      <td class="subheader_cell">Manuals</td>
+      <td class="subheader_cell">Warranty</td>  
+      <td colspan="3" class="subheader_cell" >Action</td>
+    </tr>
+  
+    <% @solar_modules.each do |solar_module| %>
+      <tr class="<%= cycle("data_odd", "data_even") %>">
+        <td class="data_cell" ><%= link_to image_tag(solar_module.image.url(:thumb)), solar_module.image.url, :target => "_blank" %></td>
+        <td class="data_cell" ><%= solar_module.manufacturer_id %></td>
+        <td class="data_cell" ><%= solar_module.part_number %></td>
+        <td class="data_cell" ><%= solar_module.stc %></td>
+        <td class="data_cell" ><%= solar_module.ptc %></td>
+        <td class="data_cell" ><%= solar_module.pmax %></td>
+        <td class="data_cell" ><%= solar_module.isc %></td>
+        <td class="data_cell" ><%= solar_module.imp %></td>
+        <td class="data_cell" ><%= solar_module.voc %></td>
+        <td class="data_cell" ><%= solar_module.vmp %></td>
+        <td class="data_cell" ><%= solar_module.height_in %></td>
+        <td class="data_cell" ><%= solar_module.width_in %></td>
+        <td class="data_cell" ><%= solar_module.weight_lbs %></td>
+        <td class="data_cell" ><%= solar_module.cell_type %></td>
+        <td class="data_cell" ><%= solar_module.frame_color %></td>
+        <td class="data_cell" >Spec Sheets</td>
+        <td class="data_cell" >Manuals</td>
+        <td class="data_cell" >Warranty</td>
+        <td class="data_cell" ><div style="margin-left: 5px; a:hover: {color: white;}" class="grid_button"><%= link_to 'Show', solar_module %></div>
+        <div style="margin-left: 5px;" class="grid_button"><%= link_to 'Edit', edit_solar_module_path(solar_module) %></div>
+       <div style="margin-left: 5px;" class="grid_button"><%= link_to 'Destroy', solar_module, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+     </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer: MyString
+  model: MyString
+  stc: MyString
+  ptc: MyString
+  pmax: MyString
+  isc: MyString
+  imp: MyString
+  voc: MyString
+  vmp: MyString
+  height_mm: MyString
+  width_mm: MyString
+  height_in: MyString
+  widht_in: MyString
+  thickness_mm: MyString
+  thickness_in: MyString
+  weight_kg: MyString
+  weight_lbs: MyString
+  tolerance_hi: MyString
+  tolerance_low: MyString
+  noct: MyString
+  cell_type: MyString
+  frame_color: MyString
+  max_sys_v: MyString
+  connector_type: MyString
+  fire_rating: MyString
+
+two:
+  manufacturer: MyString
+  model: MyString
+  stc: MyString
+  ptc: MyString
+  pmax: MyString
+  isc: MyString
+  imp: MyString
+  voc: MyString
+  vmp: MyString
+  height_mm: MyString
+  width_mm: MyString
+  height_in: MyString
+  widht_in: MyString
+  thickness_mm: MyString
+  thickness_in: MyString
+  weight_kg: MyString
+  weight_lbs: MyString
+  tolerance_hi: MyString
+  tolerance_low: MyString
+  noct: MyString
+  cell_type: MyString
+  frame_color: MyString
+  max_sys_v: MyString
+  connector_type: MyString
+  fire_rating: MyString

@@ -1,0 +1,160 @@
+<%= form_for @solar_module, :html => {:multipart => true, :class => "product_form"} do |f| %>
+  <% if @solar_module.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <li>
+          <h2><%= pluralize(@solar_module.errors.count, "error") %> prohibited this solar_module from being saved:</h2>
+        </li>
+      <% @solar_module.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <li>
+         <h2>Edit Product Detail</h2>
+         <span class="required_notification">* Denotes Required Field</span>
+    </li>
+  <li>
+<%# Insert drop down option_for_select box here for manufacturer %>
+
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :part_number %>
+    <%= f.text_field :part_number, :type => "text" %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :stc %>
+    <%= f.text_field :stc %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :ptc %>
+    <%= f.text_field :ptc %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :pmax %>
+    <%= f.text_field :pmax %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :isc %>
+    <%= f.text_field :isc %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :imp %>
+    <%= f.text_field :imp %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :voc %>
+    <%= f.text_field :voc %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :vmp %>
+    <%= f.text_field :vmp %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :height_mm %>
+    <%= f.text_field :height_mm %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :width_mm %>
+    <%= f.text_field :width_mm %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :height_in %>
+    <%= f.text_field :height_in %>
+    <span class="form_hint">Proper format test</span>
+  
+  </li>
+  <li>
+    <%= f.label :width_in %>
+    <%= f.text_field :width_in %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :thickness_mm %>
+    <%= f.text_field :thickness_mm %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :thickness_in %>
+    <%= f.text_field :thickness_in %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :weight_kg %>
+    <%= f.text_field :weight_kg %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :weight_lbs %>
+    <%= f.text_field :weight_lbs %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :tolerance_hi %>
+    <%= f.text_field :tolerance_hi %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :tolerance_low %>
+    <%= f.text_field :tolerance_low %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :noct %>
+    <%= f.text_field :noct %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :cell_type%>
+    <%= f.select :cell_type, options_for_select(["choose one", "monocrystalline", "polycrystalline"]) %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :frame_color %>
+    <%= f.select :frame_color, options_for_select(["choose one", "silver/clear", "black"])  %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :max_sys_v %>
+    <%= f.text_field :max_sys_v %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :connector_type %>
+    <%= f.select :connector_type, options_for_select(["choose one","Tyco", "MC4", "Amphenol"]) %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.label :fire_rating %>
+    <%= f.select :fire_rating, options_for_select(["choose one","Class A", "Class B", "Class C"]) %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.file_field :image %>
+    <span class="form_hint">Proper format test</span>
+  </li>
+  <li>
+    <%= f.submit %>
+<% end %>

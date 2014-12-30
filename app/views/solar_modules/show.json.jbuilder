@@ -1,0 +1,1 @@
+json.extract! @solar_module, :id, :manufacturer, :model, :stc, :ptc, :pmax, :isc, :imp, :voc, :vmp, :height_mm, :width_mm, :height_in, :width_in, :thickness_mm, :thickness_in, :weight_kg, :weight_lbs, :tolerance_hi, :tolerance_low, :noct, :cell_type, :frame_color, :max_sys_v, :connector_type, :fire_rating, :created_at, :updated_at
