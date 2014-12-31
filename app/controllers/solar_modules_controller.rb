@@ -17,6 +17,8 @@ class SolarModulesController < ApplicationController
     @solar_module = SolarModule.new
     @solar_m = SolarModule.where("module_m_id = '?'") 
     @module_ms = ModuleM.all
+    @solar_modules = SolarModule.where(module_m_id: @module_ms[0].id)
+
   end
 
   # GET /solar_modules/1/edit
@@ -63,7 +65,12 @@ class SolarModulesController < ApplicationController
   end
 
   def update_solar_modules
-    @solar_modules = SolarModules.where("module_m_id = ?", params[:module_m_id])
+    @solar_modules = SolarModule.where(module_m_id: params[:solar_module][:module_m_id])
+    respond_to do |format|
+      format.js {}
+    end
+
+    # @solar_modules = SolarModules.where("module_m_id = ?", params[:module_m_id])
   end
   # DELETE /solar_modules/1
   # DELETE /solar_modules/1.json

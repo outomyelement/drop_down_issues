@@ -19,18 +19,20 @@
 
 
     <li>
-  <%= f.select :module_m_id, options_for_select(@module_ms.collect { |module_m|
-    [module_m.name.titleize, module_m.id] }, 1), {}, { id: 'module_ms_select' } %>
-      
+    <%= f.select :module_m_id, @module_ms.collect { |p| [ p.name, p.id ] }, {}, data: {
+          remote: true,
+          url: update_solar_modules_solar_modules_path }  %>
      <span class="form_hint">Proper format test</span>
     </li>
 
     <li>
-  <%= f.select :solar_m, options_for_select(@solar_m.collect { |solar_m|
-    [solar_m.name.titleize, solar_m.id] }, 0), {}, { id: 'solar_modules_select' } %>
+      <div id="solar_m">
+        <%= render partial: 'select', locals: { solar_modules: @solar_modules }, layout: false %>
+      </div>
     <span class="form_hint">Proper format test</span>
     </li>
-
+    f.select :solar_m, options_for_select(@solar_m.collect { |solar_m|
+    [solar_m.name.titleize, solar_m.id] }, 0), {}, { id: 'solar_modules_select' 
 
 
 <!--   <li>
